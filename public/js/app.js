@@ -51,7 +51,7 @@ weatherForm.addEventListener('submit', (e) => {
 	
 	
 	//use fetch to display the weather conditions for the city of choice
-	fetch('http://localhost:3000/weather?city='+city).then((response) => {
+	fetch('/weather?city='+city).then((response) => {
 	//jsonify the response
 	response.json().then((data) => {
 		//console.log(data);

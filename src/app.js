@@ -3,7 +3,7 @@ let path = require('path');
 let hbs = require('hbs');
 let weather = require('./utility/weather');
 let app = express();
-
+let port = process.env.PORT || 3000;
 // website
 // will contain the following routes:
 // app.com = home page
@@ -138,8 +138,8 @@ app.get('*', (req, res) => {
 // port 3000 is a common deve port for local machines
 
 //add afunction as an argument which can tell what happens when the server is loaded
-app.listen(3000, () =>{
-	console.log('Server is live on port 3000.');
+app.listen(port, () =>{
+	console.log('Server is live.');
 	console.log('Open your web browser and go to the following URL. - localhost:3000');
 	console.log('To exit, come back to node.js command prompt and enter CTRL+C');
 });
